@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="GET" id="formulario">
+        <label for="item1">Item 1</label>
+        <input type="number" id="item1" name="item1">
+
+        <br>
+        <label for="item2">Item 2</label>
+        <input type="number" id="item2" name="item2">
+
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <script>
+
+        var formulario = document.getElementById("formulario");
+
+        formulario.addEventListener("submit", (evento)=>{
+            evento.preventDefault();
+
+            console.log(evento.target);
+            
+            let item1 = document.getElementById("item1").value;
+            let item2 = document.getElementById("item2").value;
+
+            if (item1 >= item2) {
+                window.alert("Item 2 deve ser maior que item 1");
+            } else {
+                formulario.submit();
+            }
+
+        })
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const notasTurma = [8.5, 4.0, 11.5, 9.2, -1.0, 6.5, 7.0, 5.5];
+
+        var aprovados = 0;
+        var reprovados = 0;
+        for (let nota of notasTurma) {
+            if (nota < 0 || nota > 10) {
+                console.log(`${nota}: Nota inválida`);
+            }
+        }
+    </script>
+</body>
+</html>
